@@ -1,5 +1,6 @@
 from django import forms
 from .models import Post
+from .models import PostSRR
 
 class PostForm(forms.ModelForm):
 
@@ -13,4 +14,4 @@ class SrrForm(forms.ModelForm):
 
 	class Meta:
 		model = PostSRR
-		fields = ('srr_id',)
+		fields = ('srr_input',)

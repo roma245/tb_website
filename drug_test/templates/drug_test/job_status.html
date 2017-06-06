@@ -1,0 +1,23 @@
+    {% extends 'drug_test/base.html' %}
+
+    {% block content %}
+        <div class="post">
+            <h1>Accession number: {{ post.srr_input }}</h1>
+            {% if post.created_date %}
+                <div class="date">
+                    Job created at: {{ post.created_date }}
+                </div>
+            {% endif %}
+
+            <p>User: {{ post.author }}</p>
+            <p>Workflow id: {{ post.invoked_wf }}</p>
+
+            {% if post.dataset_link != '' %}
+
+                <a href="{% url 'dst_detail' pk=post.pk %}">DST Results</span></a>
+
+            {% endif %}
+
+
+        </div>
+    {% endblock %}

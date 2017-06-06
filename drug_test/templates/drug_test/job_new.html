@@ -1,0 +1,10 @@
+  {% extends 'drug_test/base.html' %}
+
+    {% block content %}
+        <h1>SRR accession for a new job</h1>
+        <form method="POST" class="post-form">
+		{% csrf_token %}
+        	{{ form }}
+        	<button type="submit" class="save btn btn-default">Submit</button>
+        </form>
+    {% endblock %}
